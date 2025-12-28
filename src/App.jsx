@@ -6,9 +6,9 @@ function App() {
 const [score, setScore] = useState(0)
 
   return (
-    <main className='h-screen bg-linear-to-t from-sky-500 to-gray-950'>
+    <main className='flex flex-col min-h-screen bg-linear-to-t from-sky-950 to-gray-950'>
         <Header score={score}/>
-        <Game />
+        <Game setScore={setScore}/>
     </main>
   )
 }
