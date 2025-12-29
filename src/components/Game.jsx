@@ -6,6 +6,7 @@ function Game({ setScore }) {
 	const [cards, setCards] = useState(() => people);
 	const [prevIds, setPrevIds] = useState([]);
 
+    // Fisher-Yates Shuffle implementation
 	function shuffleCards() {
 		const shuffled = [...cards];
 		for (let i = shuffled.length - 1; i > 0; i--) {
@@ -19,6 +20,7 @@ function Game({ setScore }) {
 		return !prevIds.includes(id1);
 	}
 
+    // Increments or resets score based on game logic
 	function handleCardClick(card) {
 		const id = card.id;
 		if (!checkValidCard(id)) {
